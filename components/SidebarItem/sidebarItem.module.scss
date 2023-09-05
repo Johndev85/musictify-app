@@ -1,0 +1,19 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.container {
+  @include sideBarItems_styles;
+  @include transition;
+  &__active {
+    @include sideBarItems_styles;
+    @include transition;
+    color: $color-white;
+  }
+  &__label {
+    width: 100%;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,34 @@
+@import "../styles/variables";
+
+@mixin box_styles {
+  width: 100%;
+  height: fit-content;
+  padding: 10px;
+  background-color: $color-bg-base;
+  border-radius: 10px;
+}
+
+@mixin sideBarItems_styles {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  justify-content: flex-start;
+  cursor: pointer;
+  padding: 10px;
+  text-decoration: none;
+  color: $color-text-grey;
+  &:hover {
+    color: $color-white;
+  }
+}
+
+@mixin transition {
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}

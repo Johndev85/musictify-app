@@ -1,0 +1,14 @@
+@import "../../styles/mixins";
+
+.container {
+  @include box_styles;
+  &__fullOverflow {
+    @include box_styles;
+    overflow-y: auto;
+    height: 100vh;
+  }
+}
+
+.header {
+  padding: 16px;
+}

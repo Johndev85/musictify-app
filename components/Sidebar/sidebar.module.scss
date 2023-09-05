@@ -1,0 +1,29 @@
+@import "../../styles/variables";
+
+.container {
+  height: 100%;
+  display: flex;
+  &__sidebar {
+    max-height: 100vh;
+    height: 100%;
+    width: 420px;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    background-color: $color-bg-dark;
+    padding: 2px;
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 4px 5px;
+    }
+  }
+  &__main_content {
+    max-height: 100vh;
+    height: 100%;
+    flex: 1 1 0%;
+    overflow-y: auto;
+    padding: 8px 0;
+  }
+}

@@ -1,0 +1,38 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    &_title {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      font-weight: 700;
+      color: $color-text-grey;
+      &_icon {
+        color: $color-text-grey;
+      }
+    }
+    &_plusIcon {
+      @include transition;
+      cursor: pointer;
+      color: $color-text-grey;
+      &:hover {
+        color: $color-white;
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 12px 0;
+  }
+}
