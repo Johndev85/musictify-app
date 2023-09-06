@@ -9,7 +9,15 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <button
         type={type}
-        className={className === "white" ? styles.btn_white : styles.btn_simple}
+        className={
+          className === "white"
+            ? styles.btn_white
+            : className === "green"
+            ? styles.btn_green
+            : className === "rounded"
+            ? styles.btn_rounded
+            : styles.btn_simple
+        }
         disabled={disabled}
         ref={ref}
         {...props}

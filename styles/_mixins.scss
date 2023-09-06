@@ -8,6 +8,14 @@
   border-radius: 10px;
 }
 
+@mixin btnBaseStyles {
+  padding: 15px 32px;
+  width: fit-content;
+  border-radius: 500px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 @mixin titlesStyles {
   color: $color-white;
   font-size: 1.5rem;
