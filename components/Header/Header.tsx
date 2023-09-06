@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation"
 import { RxCaretLeft, RxCaretRight } from "react-icons/rx"
 import { HiHome } from "react-icons/hi"
 import { BiSearch } from "react-icons/bi"
+import useAuthModal from "@/hooks/useAuthModal"
 
 //components
 import Button from "../Button/Button"
@@ -18,6 +19,7 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ children, className }) => {
+  const authModal = useAuthModal()
   const router = useRouter()
 
   const handleLogOut = () => {}
@@ -49,10 +51,10 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
         </div>
         <nav className={styles.header__topMenu__subMenu}>
           <>
-            <Button onClick={() => {}} className={"simple"}>
+            <Button onClick={authModal.onOpen} className={"simple"}>
               Sign up
             </Button>
-            <Button onClick={() => {}} className={"white"}>
+            <Button onClick={authModal.onOpen} className={"white"}>
               Log in
             </Button>
           </>

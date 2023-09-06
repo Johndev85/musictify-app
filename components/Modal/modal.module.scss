@@ -83,3 +83,9 @@
     transform: translate(-50%, -50%) scale(1);
   }
 }
+
+@media (max-width: 480px) {
+  .modal__content {
+    max-width: 280px;
+  }
+}

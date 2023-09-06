@@ -10,20 +10,23 @@
   },
   "dependencies": {
     "@radix-ui/react-dialog": "1.0.4",
+    "@supabase/auth-helpers-nextjs": "0.7.4",
+    "@supabase/auth-helpers-react": "0.4.2",
+    "@supabase/auth-ui-react": "0.4.4",
+    "@supabase/auth-ui-shared": "0.1.6",
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "4.10.1",
-    "stripe": "13.4.0"
+    "stripe": "13.4.0",
+    "supabase": "1.93.0",
+    "zustand": "4.4.1"
   },
   "devDependencies": {
-    "@supabase/auth-helpers-nextjs": "0.7.4",
-    "@supabase/auth-helpers-react": "0.4.2",
     "@types/node": "20.5.9",
     "@types/react": "18.2.21",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
-    "sass": "1.66.1",
-    "supabase": "1.93.0"
+    "sass": "1.66.1"
   }
 }
