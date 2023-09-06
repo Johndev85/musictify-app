@@ -1,0 +1,33 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.btn_simple {
+  padding: 15px 32px;
+  width: fit-content;
+  border-radius: 500px;
+  background-color: transparent;
+  border: none;
+  color: $color-text-grey;
+  font-weight: 700;
+  cursor: pointer;
+  @include transition;
+  &:hover {
+    color: $color-white;
+    transform: scale(1.1);
+  }
+}
+
+.btn_white {
+  padding: 15px 32px;
+  width: fit-content;
+  border-radius: 500px;
+  background-color: $color-white;
+  border: $color-white;
+  color: $color-black;
+  font-weight: 700;
+  cursor: pointer;
+  @include transition;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
