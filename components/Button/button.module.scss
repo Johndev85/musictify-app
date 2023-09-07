@@ -35,6 +35,19 @@
   }
 }
 
+.big_green {
+  @include btnBaseStyles;
+  margin-top: 10px;
+  width: 100%;
+  background-color: $color-green;
+  border: $color-green;
+  color: $color-black;
+  @include transition;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
 .btn_rounded {
   @include btnBaseStyles;
   padding: 15px;

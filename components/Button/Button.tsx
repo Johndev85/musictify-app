@@ -16,6 +16,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             ? styles.btn_green
             : className === "rounded"
             ? styles.btn_rounded
+            : className === "big_green"
+            ? styles.big_green
             : styles.btn_simple
         }
         disabled={disabled}

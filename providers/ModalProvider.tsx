@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 
 //components
 import AuthModal from "@/components/AuthModal/AuthModal"
+import UploadModal from "@/components/UploadModal/UploadModal"
 
 const ModalProvider = () => {
   const [isMounted, setIsMounted] = useState(false)
@@ -20,6 +21,7 @@ const ModalProvider = () => {
   return (
     <>
       <AuthModal />
+      <UploadModal />
     </>
   )
 }

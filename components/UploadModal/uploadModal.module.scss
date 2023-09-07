@@ -1,0 +1,18 @@
+@import "../../styles/variables";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  &__bottom {
+    &_file {
+      padding: 4px 0;
+    }
+  }
+  &__loader {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

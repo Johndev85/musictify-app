@@ -1,0 +1,17 @@
+@import "../../styles/variables";
+
+.input {
+  padding: 12px 36px;
+  display: flex;
+  max-width: 100%;
+  width: -webkit-fill-available;
+  border-radius: 8px;
+  background-color: #242424;
+  color: $color-white;
+  border: transparent;
+  font-size: 0.875rem;
+  &:focus {
+    box-shadow: 0 0 0 2px #fff;
+    outline: none;
+  }
+}
