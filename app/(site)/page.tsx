@@ -1,10 +1,19 @@
+//styles
 import styles from "../page.module.scss"
+
+//actions
+import getSongs from "@/actions/getSongs"
 
 //components
 import Header from "@/components/Header/Header"
 import ListItem from "@/components/ListItem/ListItem"
+import PageContent from "./components/PageContent/PageContent"
 
-export default function Home() {
+export const revalidate = 0
+
+export default async function Home() {
+  const songs = await getSongs()
+
   return (
     <section className={styles.home}>
       <Header>
@@ -23,7 +32,7 @@ export default function Home() {
         <div className={styles.home__section_title}>
           <h2>Newest songs</h2>
         </div>
-        <div>List of Songs!</div>
+        <PageContent songs={songs} />
       </div>
     </section>
   )
