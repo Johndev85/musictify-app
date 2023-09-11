@@ -1,0 +1,36 @@
+@import "../../styles/variables";
+
+.container {
+  padding: 6px 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  border-radius: 8px;
+  &_img {
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    & p {
+      margin: 0;
+      text-transform: capitalize;
+    }
+    &_title {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    &_author {
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: $color-text-grey;
+    }
+  }
+  &:hover {
+    background-color: #282828;
+  }
+}

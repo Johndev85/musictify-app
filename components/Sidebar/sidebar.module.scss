@@ -13,7 +13,7 @@
     gap: 8px;
     flex-direction: column;
     background-color: $color-bg-dark;
-    padding: 8px;
+    padding: 8px 5px;
     &__inner {
       display: flex;
       flex-direction: column;
@@ -27,7 +27,7 @@
     flex: 1 1 0%;
     overflow-y: auto;
     overflow-x: hidden;
-    padding: 8px 0;
+    padding: 8px;
   }
 }
 

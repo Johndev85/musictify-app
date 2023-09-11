@@ -3,6 +3,10 @@
 //styles
 import styles from "./sidebar.module.scss"
 
+//types
+import { Song } from "@/types"
+
+//libraries
 import { usePathname } from "next/navigation"
 import { useMemo } from "react"
 import { HiHome } from "react-icons/hi"
@@ -16,9 +20,10 @@ import Library from "../Library/Library"
 //typescript props definitions
 interface SidebarProps {
   children: React.ReactNode
+  songs: Song[]
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ children }) => {
+const Sidebar: React.FC<SidebarProps> = ({ children, songs }) => {
   const pathname = usePathname()
 
   const routes = useMemo(
@@ -50,7 +55,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
           </div>
         </Box>
         <Box className={"full-overflow"}>
-          <Library />
+          <Library songs={songs} />
         </Box>
       </div>
       <main className={styles.container__main_content}>{children}</main>

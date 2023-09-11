@@ -1,6 +1,9 @@
 //styles
 import styles from "./library.module.scss"
 
+//types
+import { Song } from "@/types"
+
 //libraries
 import { TbPlaylist } from "react-icons/tb"
 import { AiOutlinePlus } from "react-icons/ai"
@@ -8,7 +11,14 @@ import useAuthModal from "@/hooks/useAuthModal"
 import { useUser } from "@/hooks/useUser"
 import useUploadModal from "@/hooks/useUploadModal"
 
-const Library = () => {
+//components
+import SongBox from "../SongBox/SongBox"
+
+interface LibraryProps {
+  songs: Song[]
+}
+
+const Library: React.FC<LibraryProps> = ({ songs }) => {
   const authModal = useAuthModal()
   const uploadModal = useUploadModal()
   const { user } = useUser()
@@ -38,7 +48,11 @@ const Library = () => {
           onClick={onClick}
         />
       </div>
-      <div className={styles.container__list}>List of Songs!</div>
+      <div className={styles.container__list}>
+        {songs.map((item) => (
+          <SongBox key={item.id} data={item} onClick={() => {}} />
+        ))}
+      </div>
     </section>
   )
 }

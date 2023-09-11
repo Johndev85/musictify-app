@@ -11,7 +11,7 @@
     gap: 8px;
     &_title {
       display: flex;
-      gap: 20px;
+      gap: 10px;
       align-items: center;
       font-weight: 700;
       color: $color-text-grey;
@@ -34,5 +34,10 @@
     gap: 8px;
     margin-top: 16px;
     padding: 12px 0;
+    & ul {
+      & li {
+        list-style: none;
+      }
+    }
   }
 }
