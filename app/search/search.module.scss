@@ -1,0 +1,20 @@
+@import "../../styles/variables";
+
+.container {
+  background-color: $color-bg-base;
+
+  &__header {
+    &__top {
+      display: flex;
+      margin-bottom: 4px;
+      flex-direction: column;
+      row-gap: 1.5rem;
+      & h1 {
+        color: $color-white;
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+        font-weight: 600;
+      }
+    }
+  }
+}
