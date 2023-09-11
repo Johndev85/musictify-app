@@ -8,6 +8,7 @@ import styles from "./searchContent.module.scss"
 
 //components
 import SongBox from "@/components/SongBox/SongBox"
+import LikeButton from "@/components/LikeButton/LikeButton"
 
 interface SearchContentProps {
   songs: Song[]
@@ -29,7 +30,7 @@ const SearchContent: React.FC<SearchContentProps> = ({ songs }) => {
           <div className={styles.container__songs__card}>
             <SongBox onClick={() => {}} data={song} />
           </div>
-          {/* TODO: Add Like Button Here */}
+          <LikeButton songId={song.id} />
         </div>
       ))}
     </div>
