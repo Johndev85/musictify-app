@@ -33,6 +33,7 @@ const SearchInput = () => {
 
   return (
     <Input
+      className={styles.input}
       placeholder="What do you wnat to listen to?"
       value={value}
       onChange={(e) => setValue(e.target.value)}

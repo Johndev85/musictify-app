@@ -29,8 +29,8 @@ const SearchContent: React.FC<SearchContentProps> = ({ songs }) => {
         <div key={song.id} className={styles.container__songs}>
           <div className={styles.container__songs__card}>
             <SongBox onClick={() => {}} data={song} />
+            <LikeButton songId={song.id} />
           </div>
-          <LikeButton songId={song.id} />
         </div>
       ))}
     </div>
