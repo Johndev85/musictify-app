@@ -13,6 +13,7 @@ import { useSupabaseClient } from "@supabase/auth-helpers-react"
 import { useUser } from "@/hooks/useUser"
 import { FaUserAlt } from "react-icons/fa"
 import { toast } from "react-hot-toast"
+import Link from "next/link"
 
 //components
 import Button from "../Button/Button"
@@ -58,12 +59,13 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
           </button>
         </div>
         <div className={styles.header__topMenu__bottom}>
-          <button className={styles.header__topMenu__bottom_btn}>
+          <Link className={styles.header__topMenu__bottom_btn} href="/">
             <HiHome size={28} />
-          </button>
-          <button className={styles.header__topMenu__bottom_btn}>
+          </Link>
+
+          <Link className={styles.header__topMenu__bottom_btn} href="/search">
             <BiSearch size={28} />
-          </button>
+          </Link>
         </div>
         <nav className={styles.header__topMenu__subMenu}>
           {user ? (
