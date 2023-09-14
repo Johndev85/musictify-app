@@ -9,14 +9,7 @@
   border-radius: 0.5rem;
   color: $color-white;
   background-color: $color-bg-base;
-  background-image: linear-gradient(
-    to bottom,
-    #669023,
-    #161415,
-    #141314,
-    #131313,
-    #121212
-  );
+  background: linear-gradient(to bottom, #669023, #161415, #121212);
   &__inter {
     margin-top: 4rem;
     &_inner {

@@ -50,7 +50,9 @@ const Library: React.FC<LibraryProps> = ({ songs }) => {
       </div>
       <div className={styles.container__list}>
         {songs.map((item) => (
-          <SongBox key={item.id} data={item} onClick={() => {}} />
+          <div key={item.id} className={styles.container__list_item}>
+            <SongBox data={item} onClick={() => {}} />
+          </div>
         ))}
       </div>
     </section>

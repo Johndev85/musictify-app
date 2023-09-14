@@ -8,16 +8,20 @@
   row-gap: 0.5rem;
   color: $color-white;
   &__list {
+    padding: 6px;
     width: auto;
     display: flex;
     align-items: center;
     column-gap: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    background: $color-bg-input;
+    &:hover {
+      background-color: #282828;
+    }
     &_item {
       width: 100%;
       display: flex;
     }
-  }
-  &:hover {
-    background-color: #282828;
   }
 }

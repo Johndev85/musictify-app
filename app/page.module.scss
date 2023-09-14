@@ -11,14 +11,7 @@
   border-radius: 4px;
   background-color: $color-bg-base;
   overflow: auto;
-  background-image: linear-gradient(
-    to bottom,
-    #669023,
-    #161415,
-    #141314,
-    #131313,
-    #121212
-  );
+  background: linear-gradient(to bottom, #669023, #161415, #121212);
   &__top {
     margin: 20px 0;
     & h1 {

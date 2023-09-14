@@ -34,9 +34,10 @@
     gap: 8px;
     margin-top: 16px;
     padding: 12px 0;
-    & ul {
-      & li {
-        list-style: none;
+    &_item {
+      border-radius: 8px;
+      &:hover {
+        background-color: #282828;
       }
     }
   }

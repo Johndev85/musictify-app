@@ -2,14 +2,7 @@
 
 .container {
   height: 100vh;
-  background-image: linear-gradient(
-    to bottom,
-    #669023,
-    #161415,
-    #141314,
-    #131313,
-    #121212
-  );
+  background: linear-gradient(to bottom, #669023, #161415, #121212);
   &__header {
     &__top {
       display: flex;

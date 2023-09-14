@@ -9,11 +9,16 @@ import { Song } from "@/types"
 //components
 import SongItem from "@/components/SongItem/SongItem"
 
+//hooks
+import useOnPlay from "@/hooks/useOnPlay"
+
 interface PagecontentProps {
   songs: Song[]
 }
 
 const PageContent: React.FC<PagecontentProps> = ({ songs }) => {
+  const onPlay = useOnPlay(songs)
+
   if (songs.length === 0) {
     return (
       <div className={styles.empty}>
@@ -24,7 +29,11 @@ const PageContent: React.FC<PagecontentProps> = ({ songs }) => {
   return (
     <div className={styles.pageContent}>
       {songs.map((item) => (
-        <SongItem key={item.id} onClick={() => {}} data={item} />
+        <SongItem
+          key={item.id}
+          onClick={(id: string) => onPlay(id)}
+          data={item}
+        />
       ))}
     </div>
   )
