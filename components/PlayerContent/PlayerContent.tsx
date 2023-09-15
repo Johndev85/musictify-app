@@ -122,11 +122,11 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
               className={styles.container__middle__controls__play_icon}
             />
           </div>
-          <div className={styles.container__middle__arrows}>
+          <div className={styles.container__middle__controls__arrows}>
             <AiFillStepForward
               onClick={onPlayNext}
               size={30}
-              className={styles.container__middle__arrows_icons}
+              className={styles.container__middle__controls__arrows_icons}
             />
           </div>
         </div>

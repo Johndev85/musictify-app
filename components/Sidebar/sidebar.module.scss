@@ -31,6 +31,12 @@
   }
 }
 
+.customView {
+  height: calc(100% - 80px);
+  display: flex;
+  gap: 20px;
+}
+
 @media (max-width: 992px) {
   .container {
     &__sidebar {

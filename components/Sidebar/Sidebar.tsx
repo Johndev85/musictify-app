@@ -17,6 +17,9 @@ import Box from "../Box/Box"
 import SidebarItem from "../SidebarItem/SidebarItem"
 import Library from "../Library/Library"
 
+//hooks
+import usePlayer from "@/hooks/usePlayer"
+
 //typescript props definitions
 interface SidebarProps {
   children: React.ReactNode
@@ -25,6 +28,7 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ children, songs }) => {
   const pathname = usePathname()
+  const player = usePlayer()
 
   const routes = useMemo(
     () => [
@@ -45,7 +49,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children, songs }) => {
   )
 
   return (
-    <div className={styles.container}>
+    <div className={player.activeId ? styles.customView : styles.container}>
       <div className={styles.container__sidebar}>
         <Box>
           <div className={styles.container__sidebar__inner}>

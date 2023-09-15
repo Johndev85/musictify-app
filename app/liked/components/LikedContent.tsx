@@ -12,6 +12,7 @@ import { Song } from "@/types"
 
 //hooks
 import { useUser } from "@/hooks/useUser"
+import useOnPlay from "@/hooks/useOnPlay"
 
 //components
 import SongBox from "@/components/SongBox/SongBox"
@@ -24,6 +25,8 @@ interface LikedContentPros {
 const LikedContent: React.FC<LikedContentPros> = ({ songs }) => {
   const router = useRouter()
   const { isLoading, user } = useUser()
+
+  const OnPlay = useOnPlay(songs)
 
   useEffect(() => {
     if (!isLoading && !user) {
@@ -44,7 +47,12 @@ const LikedContent: React.FC<LikedContentPros> = ({ songs }) => {
       {songs.map((song) => (
         <div key={song.id} className={styles.container__list}>
           <div className={styles.container__list_item}>
-            <SongBox onClick={() => {}} data={song} />
+            <SongBox
+              onClick={(id: string) => {
+                OnPlay(id)
+              }}
+              data={song}
+            />
           </div>
           <LikeButton songId={song.id} />
         </div>

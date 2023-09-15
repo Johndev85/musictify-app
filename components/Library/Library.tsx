@@ -14,6 +14,9 @@ import useUploadModal from "@/hooks/useUploadModal"
 //components
 import SongBox from "../SongBox/SongBox"
 
+//hooks
+import useOnPlay from "@/hooks/useOnPlay"
+
 interface LibraryProps {
   songs: Song[]
 }
@@ -22,6 +25,8 @@ const Library: React.FC<LibraryProps> = ({ songs }) => {
   const authModal = useAuthModal()
   const uploadModal = useUploadModal()
   const { user } = useUser()
+
+  const OnPlay = useOnPlay(songs)
 
   const onClick = () => {
     if (!user) {
@@ -51,7 +56,7 @@ const Library: React.FC<LibraryProps> = ({ songs }) => {
       <div className={styles.container__list}>
         {songs.map((item) => (
           <div key={item.id} className={styles.container__list_item}>
-            <SongBox data={item} onClick={() => {}} />
+            <SongBox data={item} onClick={(id: string) => OnPlay(id)} />
           </div>
         ))}
       </div>

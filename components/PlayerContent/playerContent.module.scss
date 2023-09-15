@@ -4,7 +4,7 @@
 .container {
   height: 100%;
   display: grid;
-  grid-template: auto / repeat(2, 1fr);
+  grid-template: auto / 45% 55%;
   @include transition;
   &__inner {
     justify-self: center;
