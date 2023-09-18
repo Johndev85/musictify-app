@@ -43,6 +43,10 @@ export interface Price {
   products?: Product
 }
 
+export interface ProductWithPrice extends Product {
+  prices?: Price[]
+}
+
 export interface Subscription {
   id: string
   user_id: string
@@ -59,5 +63,6 @@ export interface Subscription {
   canceled_at?: string
   trial_start?: string
   trial_end?: string
+  trial_from_plan?: boolean
   prices?: Price
 }
