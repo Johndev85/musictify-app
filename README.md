@@ -18,8 +18,6 @@
 
 Recreate Full Stack Spotify Clone with Next.js 13.4 new App Router, React 18.2, Sass, Supabase(PostgreSQL), Stripe.
 
-Use Stripe Testing Cards for DEMO.
-
 ---
 
 ## 🗝 Features
@@ -96,6 +94,7 @@ npm run dev
 #### Stripe for Subscriptions products
 
 - Recurring payment integration
+- Use Stripe Testing Cards
 
 - [https://stripe.com/](https://stripe.com/)
 
