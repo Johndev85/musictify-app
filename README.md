@@ -10,7 +10,7 @@
 
 **API Deploy:**
 
-### [link](link)
+### [https://musictify-app.vercel.app/](https://musictify-app.vercel.app/)
 
 ---
 
