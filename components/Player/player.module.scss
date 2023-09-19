@@ -3,6 +3,7 @@
 
 .container {
   width: -webkit-fill-available;
+  width: -moz-available;
   height: 80px;
   padding: 0.5rem 1rem;
   position: fixed;
