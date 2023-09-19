@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation"
 //styles
-import styles from "./account.module.scss"
+import styles from "./accountContent.module.scss"
 
 //libraries
 import { useEffect, useState } from "react"
@@ -47,6 +47,7 @@ const AccountContent = () => {
 
   return (
     <section className={styles.container}>
+      {user && <h3>{user.email}</h3>}
       {!subscription && (
         <div className={styles.container__internal}>
           <p>No active plan.</p>

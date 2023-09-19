@@ -3,6 +3,7 @@ import styles from "./songBox.module.scss"
 
 //hooks
 import useLoadImage from "@/hooks/useLoadImage"
+import usePlayer from "@/hooks/usePlayer"
 
 //types
 import { Song } from "@/types"
@@ -16,6 +17,7 @@ interface SongBoxProps {
 }
 
 const SongBox: React.FC<SongBoxProps> = ({ data, onClick }) => {
+  const player = usePlayer()
   const imageUrl = useLoadImage(data)
 
   const handleClick = () => {
@@ -23,7 +25,7 @@ const SongBox: React.FC<SongBoxProps> = ({ data, onClick }) => {
       return onClick(data.id)
     }
 
-    //TODO:  Default turn on play
+    return player.setId(data.id)
   }
 
   return (
