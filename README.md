@@ -1,4 +1,4 @@
-# Full Stack Musictify App with Next.js 13.4 App Router, React, Supabase(PostgreSQL), Stripe, Sass
+# Full Stack Musictify App with Next.js 13.4, React 18, Supabase(PostgreSQL), Stripe, Sass
 
 ![app image](/public/images/screenshot.png)
 
@@ -16,7 +16,7 @@
 
 ## 🎯 Objective
 
-Recreate Full Stack Spotify Clone with Next.js 13.4 new App Router, React 18.2, Sass, Supabase(PostgreSQL), Stripe.
+Recreate Full Stack Spotify Clone with Next.js 13.4 new App Router, React 18.2, TypeScript, Sass, Supabase(PostgreSQL), Stripe.
 
 ---
 
@@ -25,7 +25,8 @@ Recreate Full Stack Spotify Clone with Next.js 13.4 new App Router, React 18.2, 
 - Song upload
 - File and image upload using Supabase storage
 - Stripe integration
-- Full responsiveness for all devices
+- Full responsive for all devices
+- State management with zustand
 - Credential authentication with Supabase
 - Github authentication integration
 - Client form validation and handling using react-hook-form
@@ -98,6 +99,12 @@ npm run dev
 
 - [https://stripe.com/](https://stripe.com/)
 
+#### Using Stripe Test Cards
+
+![test card](/public/images/test-card.png)
+
+- [https://stripe.com/docs/testing?testing-method=card-numbers#cards](https://stripe.com/docs/testing?testing-method=card-numbers#cards)
+
 ---
 
 ## 🛠 Deployment
@@ -120,9 +127,12 @@ npm run dev
 
 ## 💻 Technologies:
 
-- HTML5
-- Sass - CSS3
-- React - JavaScript
+- Typescript (JavaScript)
+- React
 - Next.js
+- Sass - CSS3
+- HTML5
 - Supabase
 - Stripe
+- zustand (Store)
+- Radix-UI
